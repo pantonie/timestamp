@@ -34,9 +34,9 @@ app.get('/', function(req,res){
         res.sendFile(__dirname + '/index.html');
 })
 app.get('*', function(req, res){
-    if (req.url == '/'){
-        res.sendFile(__dirname + '/index.html');
-    }
+    // if (req.url == '/'){
+    //     res.sendFile(__dirname + '/index.html');
+    // }
     var request = req.url.slice(1, req.url.length);
     if (!isNaN(request)){
         var date = new Date(request*1000);
